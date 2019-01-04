@@ -1,0 +1,13 @@
+
+z_im = 0
+z_re = 0
+z_prev_im = 0
+z_prev_re = 0
+c_im = 0
+c_re = 0
+for i in range(25):
+    z_re = z_prev_re**2 - z_prev_im**2 + c_re
+    z_im = 2 * z_prev_re * z_prev_im + c_im
+    z_prev_re = z_re
+    z_prev_im = z_im
+    print(z_re, z_im)
